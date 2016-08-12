@@ -14,9 +14,9 @@
     } from 'react-native';
 
     var HomePageView = require('./HomePageView');
-    // var NewsListView = require('./NewsListView');
-    // var FoodListView = require('./FoodListView');
-    // var SiteListView = require('./SiteListView');
+    var NewsListView = require('./NewsListView');
+    var FoodListView = require('./FoodListView');
+    var SiteListView = require('./SiteListView');
 
     var base64IconHome = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAvCAQAAAAVt2HMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAAAlgAAAJYAJvGvrMAAAMuSURBVFjD7ddPaFVHFMfxT9+fkpo0uoj/aiC4aEwF0TYUBCEVIi6qhXSRjd3ULhpcKIK6EmlxUdzoIoQGhYAtVBBKoUkt6MKSoAQRUjdSTGPF2iimhETTav6Y3C6Sl+bOe0mTvJdNzfxWd87M+c6dOXPOvSympdRp16dPuzqpwFrmOz26p/WrTm8vihO0Ykf0i6bU74jimH2Hv6atGTXkj12r2UjM6YgvrZ0x4j3PssAH8sW+5UcTWW4n/KBqKcG73MpymdHPapcG/KpPPZwVG4n0+kS60ODXfRGEzAtt2ryI9Q353GtqCgeu8I2xmKNnTltlldMBZEyLj/xdGPC7rgdu+hxUBIoc1Bezjfs9WOSiwEkf+i1wcsdeCWy1FQl73Znz7BcBjqeKSV21DSn17rqrXgrbXC0keI2mIFWMOq8cJY4bFIkMOq4E5c4bLQy4UluQKp44oQTrnZtximPOWY8SJzzJH1yjK5j6wD4pbHEly+0VW5Cyz4N8wGkf+yOY2KUGCXvczun4tj0SORc8b3CpzwwFF6TVJqxwOLg68St22Aps0mp84eByXwe3cFSTMpRpNDxn5A5rnBrZlBVo33pjLmy1jmBCv6OKZ32PUJm9KXY06xr+5J3c0IQPshJBtzpJ7Jzl5HKpy04k1ekOLL943yshtsghfwYDO1Ujbb/eeWMjkV77pVGtMysOMql2qq3W6HlsyJgLKrDSqSDU5qMhp6xEhQtBxDzXaPW/qaI1SBVDTirFRhdzJPz5aMxFG1HqZLDwCd97E2rdDCY90iCN7W4sCprRDduR1uBRYLmplvtB5y27kFTvXl7YSOSeekm5Ppnuczm2zZdUmSwCA3ljI5GBqSJS5VJsuy9T6drU44iz1mGDljkrzcI0qsUGrHN2utZdUzmZNrpFBh1TjM3aCwbNqN1mFDtmUKRbdSaud2ue/hVpKDg2kvmTSKnTbHfuDHZgScBZRSIxnzq5FO3lA6cWPCPSZzhWZSJF1mTXnUKDRxxyXXJGz7gdvopXnaV548d6g77HooW6efmCaxm8DF4G/x/BPZ4WnPJUz3+DO5wxUFDsgDM6ws5/ACyDBjd57iOWAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA3LTI1VDIxOjQ5OjMxKzA4OjAwSNMPTQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNC0wNC0yNFQyMTo1OTo1MyswODowMLPmA2cAAABOdEVYdHNvZnR3YXJlAEltYWdlTWFnaWNrIDYuOC44LTEwIFExNiB4ODZfNjQgMjAxNS0wNy0xOSBodHRwOi8vd3d3LmltYWdlbWFnaWNrLm9yZwUMnDUAAABjdEVYdHN2Zzpjb21tZW50ACBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuNCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIA5Jg+MAAAAYdEVYdFRodW1iOjpEb2N1bWVudDo6UGFnZXMAMaf/uy8AAAAYdEVYdFRodW1iOjpJbWFnZTo6SGVpZ2h0ADg3M6YIV8IAAAAYdEVYdFRodW1iOjpJbWFnZTo6V2lkdGgAMTA5N4iSjNUAAAAZdEVYdFRodW1iOjpNaW1ldHlwZQBpbWFnZS9wbmc/slZOAAAAF3RFWHRUaHVtYjo6TVRpbWUAMTM5ODM0Nzk5M83hUssAAAATdEVYdFRodW1iOjpTaXplADIwLjVLQkKUWyAWAAAAWnRFWHRUaHVtYjo6VVJJAGZpbGU6Ly8vaG9tZS93d3dyb290L3d3dy5lYXN5aWNvbi5uZXQvY2RuLWltZy5lYXN5aWNvbi5jbi9zcmMvMTE0OTgvMTE0OTg3OC5wbmdjG05UAAAAAElFTkSuQmCC';
     var base64IconNews = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAvCAQAAAA27DAZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAAAlgAAAJYAJvGvrMAAATYSURBVFjDtdddjFXVFQfw37n3zNxhHEZmgIGBGT5moEQhVokNqNhQxZAYxTItqQqa1KY2sba2TYw+NO1bCSWm7YM+YG2TSu2krYka8cEICkRURFobFL9nYIIfgB0YLsPM3Ln3+DCnd245B7korv1wsvY++7/W/u+1116bcfma17zhyrK+0L/82+Kyfqm9XrWorC+xz6sWlPXl9tutcxwwC5pdrFOXNVrUOmquOdrcrMt0JcfNNUe7dW4yw7C8DnO0+4GVWp00pMMcs9xluWk+VTLVKUOQscx2xwwaEYkUDMYtXR8p64Uz6v22WipgpQOir6B94Jqs9RUsn09pEgb6tH0l4LwXakJRdJ6BA1kXhija6OU4biKR0hcEzAgEoGi5nxEistuT8Q+hFjM0fAHoEz50xGisTRSNgYvt0eh+t2qSO2eaAkP6PWqjE+Ue5BV0gVp/MPqlwq9goxqwTuRwWGG9wxpZRb0KZpsg75BZSg4qocYsh9RrdcoBjWY45iPtGnyoR50FGoRutsm745Djnq82ItJvhak2i2yzwB47zTLbXFfrsdY6Jdu0usWo37nIPt0u1anTUyKRIdenez5dDSL9TtrkOgVHFIw4Zr1vCM10oa3+a69+ffJe1CL0S/P8zYDZMbVTK8MnKZFVPvVgObD+F6IZC33ibXtdY8Bb9rtak3q93jHPtLTYTEpJmxv9w6E4lgrWW+sXjlqqxk5vWazkP07p0OIhU9zuBq9VBx4p+qGc7vhg1fqt5/zFFPN0ekXWStNtV+cyXOUpf9TjNwrVgFPS4S475WNjh/U5KK/RUttMdImFntZmvgGb7ZcTylWQGEsoaa5VE27wuB45JdM8KGOCh11usW5LNLrSP61wgQMe0SN0iXuTWEnwif6kDq0ec1KLyFYlZLRgtW+ahFWu0IR2f3dIvZkuSBKQ7vmYNGsG7RWjDXHeqYt7M6ZWBt/ZwEftM5Dk7ywSmWTR6TuYBB90j11xnCRX5QwJuehaT6g7G3hk2LcsS+TFQN5jsm5Rn5IztxtK9ibBybrKCsVE/4gX5KxMmZM15JUkUPLHwKgNHklhveCwwNo4qf7/ao9YUg14JOte302hZcA9aj2QEnSBv9pdDTiRLXpTAAYdlPV7E1I4f11TteBDyTwhMKKgaESYAj6cdjGmgWd8x/cSIRc4rk/OfWOX72ljj1a7oUUb/DllQ4cdwbflUtb6cVrdlrahGd/XleLdMb9S49caU8a6vV8t5x94mdMgAnknZO1JHKKAlAA4Ay2R1+UTtAROOirj2ZQTGnnXxdXScrfbU5be7w61Hk6lZZMXq/O85AHdgsTih/UKdCXqsUCkz2XVeR641nUpFB73kBo/Sq0ktxgozy9/0zwPNGpOWXqNnNBk9SlzGss14hQzBNrGCpPxiutOkciwNbGJZPM5I2vjN9FRvXodF9lT6fn7BtWrtcEqp6RJgPT6t96ymIXJJoOX/KTS85neOG/PrZcsZAx8dWz/Nh+dF+gdY1EfKgnKN+Zmn/ixyWqdq0TqXBRfI8+725tj4B+bX35iR561VZiaFD5fSr5ui2bscKf3xjpDL5jvp3L2VGzVub/tSq7QgB3uqExhi+wSKSkY+VKtKPKMjkqLWYftkjVJY+LAn6vs8HPvVHZ8Bq1jRdijlJoWAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA3LTI1VDIxOjQ5OjMxKzA4OjAwSNMPTQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNC0wNS0yNlQxODoxOTozNSswODowMA02xlAAAABOdEVYdHNvZnR3YXJlAEltYWdlTWFnaWNrIDYuOC44LTEwIFExNiB4ODZfNjQgMjAxNS0wNy0xOSBodHRwOi8vd3d3LmltYWdlbWFnaWNrLm9yZwUMnDUAAABjdEVYdHN2Zzpjb21tZW50ACBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIHILdZYAAAAYdEVYdFRodW1iOjpEb2N1bWVudDo6UGFnZXMAMaf/uy8AAAAYdEVYdFRodW1iOjpJbWFnZTo6SGVpZ2h0ADI3NDX7R7cAAAAXdEVYdFRodW1iOjpJbWFnZTo6V2lkdGgAMjY0vxEmqwAAABl0RVh0VGh1bWI6Ok1pbWV0eXBlAGltYWdlL3BuZz+yVk4AAAAXdEVYdFRodW1iOjpNVGltZQAxNDAxMDk5NTc1w3bRCQAAABJ0RVh0VGh1bWI6OlNpemUANi4xS0JC8+cwwgAAAFp0RVh0VGh1bWI6OlVSSQBmaWxlOi8vL2hvbWUvd3d3cm9vdC93d3cuZWFzeWljb24ubmV0L2Nkbi1pbWcuZWFzeWljb24uY24vc3JjLzExNjYzLzExNjYzNjIucG5nDv1RRAAAAABJRU5ErkJggg==';
@@ -47,23 +47,17 @@
             break;
             case '新闻':
             return (
-              <View style={[styles.tabContent, {backgroundColor: color}]}>
-                <Text style={styles.tabText}>{pageTitle}</Text>
-              </View>
+              <NewsListView contextText='新闻'/>
             );
               break;
               case '餐饮':
               return (
-                <View style={[styles.tabContent, {backgroundColor: color}]}>
-                  <Text style={styles.tabText}>{pageTitle}</Text>
-                </View>
+                <FoodListView contextText='餐饮'/>
               );
                 break;
                 case '景点':
                 return (
-                  <View style={[styles.tabContent, {backgroundColor: color}]}>
-                    <Text style={styles.tabText}>{pageTitle}</Text>
-                  </View>
+                  <SiteListView contextText='景点'/>
                 );
                   break;
           default: break;
